@@ -1,8 +1,9 @@
 import React from "react";
 import { Avatar, Heading, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
+import profile from "../images/Profile.jpg"
 
-const greeting = "Hello, I am Pete!";
+const greeting = "Hello, I am Pearl!";
 const bio1 = "A frontend developer";
 const bio2 = "specialised in React";
 
@@ -16,6 +17,19 @@ const LandingSection = () => (
     backgroundColor="#2A4365"
   >
 
+  <VStack spacing={16}>
+    <Avatar src={profile}
+    size='2xl'
+    name='Pearl'/>
+
+    <Heading as='h4' size='md' noOfLines={1}>{greeting}</Heading>
+
+    <VStack>
+    <Heading as='h1' size='3xl' noOfLines={1}>{bio1}</Heading>
+    <Heading as='h1' size='3xl' noOfLines={1}>{bio2}</Heading>
+    </VStack>
+    
+  </VStack>
   </FullScreenSection>
 );
 
